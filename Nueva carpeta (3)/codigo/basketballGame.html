@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BasketMates</title>
+    <link rel="stylesheet" href="styles-basketSuma.css" />
+</head>
+<body>
+
+    <div class="cancha">
+        <div class="linea1"></div>
+        <div class="linea2"></div>
+        <div class="linea3"></div>
+        <div class="circulo-central"></div>
+        <div class="canasta izquierda"></div>
+        <div class="canasta derecha"></div>
+        <div class="area-libre izquierda"></div>
+        <div class="area-libre derecha"></div>
+    </div>
+
+    <div class="fueraJuego">
+        <div class="balon">
+            <img src="/img/balosBasketball.png" alt="Balón de baloncesto" />
+        </div>
+
+        <h1>BasketMates</h1>
+        <button id="iniciar" disabled>INICIAR</button>
+        <p id="cargandoMensaje">Cargando preguntas...</p>
+    </div>
+
+    <div class="Dentrojuego" style="display:none;">
+        <div id="videoBackground">
+            <a href="" id="video2"></a>
+        </div>
+
+        <span id="marcador" class="marcador">0 - 0</span>
+        <div id="alertaBasket" style="display: none;">
+            <div id="mensajeBasket"></div>
+        </div>
+
+        <div id="container">
+            <h1>RESPONDE LAS PREGUNTAS</h1>
+            <p id="pregunta"></p>
+            <div id="balones"></div>
+            <div id="opciones"></div>
+            <div id="botones">
+                <button id="Reiniciar" class="reiniciar">Reiniciar</button>
+                <button id="Salir" class="salir">Salir</button>
+            </div>
+        </div>
+    </div>
+    <div id="contenedorVideoAnimacion" style="display:none; width:320px; height:180px; margin: 10px auto;">
+  <!-- Aquí irá el video -->
+</div>
+
+    <div id="alerta" class="alerta" style="display:none;">
+        <h2 id="mensaje">RESULTADO</h2>
+        <div id="indicadores" class="indicadores"></div>
+        <div id="botonesFinales" style="margin-top: 10px; display: none;">
+            <button id="btnReiniciar">Reiniciar</button>
+            <button id="btnSalirFinal">Salir</button>
+        </div>
+    </div>
+
+    <script src="script-basketSuma.js"></script>
+</body>
+</html>

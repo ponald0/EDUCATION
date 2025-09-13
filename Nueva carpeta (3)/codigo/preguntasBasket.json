@@ -1,0 +1,483 @@
+[
+  {
+    "cantidad1": 2,
+    "cantidad2": 1,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 2 × 1?",
+    "opciones": ["1", "2", "3"],
+    "respuesta": "2"
+  },
+  {
+    "cantidad1": 2,
+    "cantidad2": 2,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 2 × 2?",
+    "opciones": ["2", "4", "6"],
+    "respuesta": "4"
+  },
+  {
+    "cantidad1": 2,
+    "cantidad2": 3,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 2 × 3?",
+    "opciones": ["4", "6", "8"],
+    "respuesta": "6"
+  },
+  {
+    "cantidad1": 2,
+    "cantidad2": 4,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 2 × 4?",
+    "opciones": ["6", "8", "10"],
+    "respuesta": "8"
+  },
+  {
+    "cantidad1": 2,
+    "cantidad2": 5,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 2 × 5?",
+    "opciones": ["8", "10", "12"],
+    "respuesta": "10"
+  },
+  {
+    "cantidad1": 2,
+    "cantidad2": 6,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 2 × 6?",
+    "opciones": ["10", "12", "14"],
+    "respuesta": "12"
+  },
+  {
+    "cantidad1": 2,
+    "cantidad2": 7,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 2 × 7?",
+    "opciones": ["12", "14", "16"],
+    "respuesta": "14"
+  },
+  {
+    "cantidad1": 2,
+    "cantidad2": 8,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 2 × 8?",
+    "opciones": ["14", "16", "18"],
+    "respuesta": "16"
+  },
+  {
+    "cantidad1": 2,
+    "cantidad2": 9,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 2 × 9?",
+    "opciones": ["16", "18", "20"],
+    "respuesta": "18"
+  },
+  {
+    "cantidad1": 2,
+    "cantidad2": 10,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 2 × 10?",
+    "opciones": ["18", "20", "22"],
+    "respuesta": "20"
+  },
+  {
+    "cantidad1": 3,
+    "cantidad2": 1,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 3 × 1?",
+    "opciones": ["2", "3", "4"],
+    "respuesta": "3"
+  },
+  {
+    "cantidad1": 3,
+    "cantidad2": 2,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 3 × 2?",
+    "opciones": ["4", "6", "8"],
+    "respuesta": "6"
+  },
+  {
+    "cantidad1": 3,
+    "cantidad2": 3,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 3 × 3?",
+    "opciones": ["6", "9", "12"],
+    "respuesta": "9"
+  },
+  {
+    "cantidad1": 3,
+    "cantidad2": 4,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 3 × 4?",
+    "opciones": ["9", "12", "15"],
+    "respuesta": "12"
+  },
+  {
+    "cantidad1": 3,
+    "cantidad2": 5,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 3 × 5?",
+    "opciones": ["12", "15", "18"],
+    "respuesta": "15"
+  },
+  {
+    "cantidad1": 3,
+    "cantidad2": 6,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 3 × 6?",
+    "opciones": ["15", "18", "21"],
+    "respuesta": "18"
+  },
+  {
+    "cantidad1": 3,
+    "cantidad2": 7,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 3 × 7?",
+    "opciones": ["18", "21", "24"],
+    "respuesta": "21"
+  },
+  {
+    "cantidad1": 3,
+    "cantidad2": 8,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 3 × 8?",
+    "opciones": ["21", "24", "27"],
+    "respuesta": "24"
+  },
+  {
+    "cantidad1": 3,
+    "cantidad2": 9,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 3 × 9?",
+    "opciones": ["24", "27", "30"],
+    "respuesta": "27"
+  },
+  {
+    "cantidad1": 3,
+    "cantidad2": 10,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 3 × 10?",
+    "opciones": ["27", "30", "33"],
+    "respuesta": "30"
+  },
+  {
+    "cantidad1": 4,
+    "cantidad2": 1,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 4 × 1?",
+    "opciones": ["3", "4", "5"],
+    "respuesta": "4"
+  },
+  {
+    "cantidad1": 4,
+    "cantidad2": 2,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 4 × 2?",
+    "opciones": ["6", "8", "10"],
+    "respuesta": "8"
+  },
+  {
+    "cantidad1": 4,
+    "cantidad2": 3,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 4 × 3?",
+    "opciones": ["10", "12", "14"],
+    "respuesta": "12"
+  },
+  {
+    "cantidad1": 4,
+    "cantidad2": 4,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 4 × 4?",
+    "opciones": ["14", "16", "18"],
+    "respuesta": "16"
+  },
+  {
+    "cantidad1": 4,
+    "cantidad2": 5,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 4 × 5?",
+    "opciones": ["18", "20", "22"],
+    "respuesta": "20"
+  },
+  {
+    "cantidad1": 4,
+    "cantidad2": 6,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 4 × 6?",
+    "opciones": ["22", "24", "26"],
+    "respuesta": "24"
+  },
+  {
+    "cantidad1": 4,
+    "cantidad2": 7,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 4 × 7?",
+    "opciones": ["26", "28", "30"],
+    "respuesta": "28"
+  },
+  {
+    "cantidad1": 4,
+    "cantidad2": 8,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 4 × 8?",
+    "opciones": ["30", "32", "34"],
+    "respuesta": "32"
+  },
+  {
+    "cantidad1": 4,
+    "cantidad2": 9,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 4 × 9?",
+    "opciones": ["34", "36", "38"],
+    "respuesta": "36"
+  },
+  {
+    "cantidad1": 4,
+    "cantidad2": 10,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 4 × 10?",
+    "opciones": ["38", "40", "42"],
+    "respuesta": "40"
+  },
+  {
+    "cantidad1": 5,
+    "cantidad2": 1,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 5 × 1?",
+    "opciones": ["4", "5", "6"],
+    "respuesta": "5"
+  },
+  {
+    "cantidad1": 5,
+    "cantidad2": 2,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 5 × 2?",
+    "opciones": ["8", "10", "12"],
+    "respuesta": "10"
+  },
+  {
+    "cantidad1": 5,
+    "cantidad2": 3,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 5 × 3?",
+    "opciones": ["12", "15", "18"],
+    "respuesta": "15"
+  },
+  {
+    "cantidad1": 5,
+    "cantidad2": 4,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 5 × 4?",
+    "opciones": ["18", "20", "22"],
+    "respuesta": "20"
+  },
+  {
+    "cantidad1": 5,
+    "cantidad2": 5,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 5 × 5?",
+    "opciones": ["22", "25", "28"],
+    "respuesta": "25"
+  },
+  {
+    "cantidad1": 5,
+    "cantidad2": 6,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 5 × 6?",
+    "opciones": ["28", "30", "32"],
+    "respuesta": "30"
+  },
+  {
+    "cantidad1": 5,
+    "cantidad2": 7,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 5 × 7?",
+    "opciones": ["32", "35", "38"],
+    "respuesta": "35"
+  },
+  {
+    "cantidad1": 5,
+    "cantidad2": 8,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 5 × 8?",
+    "opciones": ["38", "40", "42"],
+    "respuesta": "40"
+  },
+  {
+    "cantidad1": 5,
+    "cantidad2": 9,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 5 × 9?",
+    "opciones": ["42", "45", "48"],
+    "respuesta": "45"
+  },
+  {
+    "cantidad1": 5,
+    "cantidad2": 10,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 5 × 10?",
+    "opciones": ["48", "50", "52"],
+    "respuesta": "50"
+  },
+  {
+    "cantidad1": 6,
+    "cantidad2": 1,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 6 × 1?",
+    "opciones": ["5", "6", "7"],
+    "respuesta": "6"
+  },
+  {
+    "cantidad1": 6,
+    "cantidad2": 2,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 6 × 2?",
+    "opciones": ["10", "12", "14"],
+    "respuesta": "12"
+  },
+  {
+    "cantidad1": 6,
+    "cantidad2": 3,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 6 × 3?",
+    "opciones": ["16", "18", "20"],
+    "respuesta": "18"
+  },
+  {
+    "cantidad1": 6,
+    "cantidad2": 4,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 6 × 4?",
+    "opciones": ["20", "24", "28"],
+    "respuesta": "24"
+  },
+  {
+    "cantidad1": 6,
+    "cantidad2": 5,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 6 × 5?",
+    "opciones": ["28", "30", "32"],
+    "respuesta": "30"
+  },
+  {
+    "cantidad1": 6,
+    "cantidad2": 6,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 6 × 6?",
+    "opciones": ["32", "36", "40"],
+    "respuesta": "36"
+  },
+  {
+    "cantidad1": 6,
+    "cantidad2": 7,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 6 × 7?",
+    "opciones": ["38", "42", "46"],
+    "respuesta": "42"
+  },
+  {
+    "cantidad1": 6,
+    "cantidad2": 8,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 6 × 8?",
+    "opciones": ["44", "48", "52"],
+    "respuesta": "48"
+  },
+  {
+    "cantidad1": 6,
+    "cantidad2": 9,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 6 × 9?",
+    "opciones": ["50", "54", "58"],
+    "respuesta": "54"
+  },
+  {
+    "cantidad1": 6,
+    "cantidad2": 10,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 6 × 10?",
+    "opciones": ["58", "60", "62"],
+    "respuesta": "60"
+  },
+  {
+    "cantidad1": 7,
+    "cantidad2": 1,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 7 × 1?",
+    "opciones": ["6", "7", "8"],
+    "respuesta": "7"
+  },
+  {
+    "cantidad1": 7,
+    "cantidad2": 2,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 7 × 2?",
+    "opciones": ["12", "14", "16"],
+    "respuesta": "14"
+  },
+  {
+    "cantidad1": 7,
+    "cantidad2": 3,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 7 × 3?",
+    "opciones": ["18", "21", "24"],
+    "respuesta": "21"
+  },
+  {
+    "cantidad1": 7,
+    "cantidad2": 4,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 7 × 4?",
+    "opciones": ["24", "28", "32"],
+    "respuesta": "28"
+  },
+  {
+    "cantidad1": 7,
+    "cantidad2": 5,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 7 × 5?",
+    "opciones": ["30", "35", "40"],
+    "respuesta": "35"
+  },
+  {
+    "cantidad1": 7,
+    "cantidad2": 6,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 7 × 6?",
+    "opciones": ["38", "42", "46"],
+    "respuesta": "42"
+  },
+  {
+    "cantidad1": 7,
+    "cantidad2": 7,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 7 × 7?",
+    "opciones": ["44", "49", "54"],
+    "respuesta": "49"
+  }
+  ,
+  {
+    "cantidad1": 7,
+    "cantidad2": 8,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 7 × 8?",
+    "opciones": ["54", "56", "60"],
+    "respuesta": "56"
+  },
+  {
+    "cantidad1": 7,
+    "cantidad2": 9,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 7 × 9?",
+    "opciones": ["60", "63", "66"],
+    "respuesta": "63"
+  },
+  {
+    "cantidad1": 7,
+    "cantidad2": 10,
+    "operacion": "×",
+    "pregunta": "¿Cuánto es 7 × 10?",
+    "opciones": ["66", "70", "74"],
+    "respuesta": "70"
+  } 
+]

@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Aprende Jugando</title>
+  <style>
+    body {
+      font-family: "Comic Sans MS", Arial, sans-serif;
+      background: #fcefee;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(90deg, #ff6f61, #ffcc70);
+      color: white;
+      padding: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    .container {
+      padding: 20px;
+      text-align: center;
+    }
+    .menu button {
+      margin: 15px;
+      padding: 20px 30px;
+      font-size: 20px;
+      border: none;
+      border-radius: 20px;
+      background: #ffcc70;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+    .menu button:hover {
+      background: #ff6f61;
+      color: white;
+      transform: scale(1.1);
+    }
+    .section {
+      display: none;
+      text-align: left;
+      background: white;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      margin: 20px auto;
+      max-width: 900px;
+    }
+    h2 {
+      text-align: center;
+      color: #ff6f61;
+    }
+    h3 {
+      color: #6a5acd;
+      border-bottom: 2px solid #ffcc70;
+      padding-bottom: 10px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    ul {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    .subtopic {
+      margin: 20px 0;
+      padding: 15px;
+      background: #f9f9f9;
+      border-radius: 15px;
+      border: 2px solid #ffcc70;
+    }
+    .question {
+      margin: 20px 0;
+      padding: 15px;
+      background: #f9f9f9;
+      border-radius: 15px;
+      border: 2px solid #ffcc70;
+    }
+    .question p {
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .question button {
+      margin: 8px;
+      padding: 12px 18px;
+      border-radius: 12px;
+      border: none;
+      background: #ffcc70;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+    .question button:hover {
+      background: #ff6f61;
+      color: white;
+    }
+    .speak-btn {
+      background: #32cd32;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 18px;
+      margin: 15px 0;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .speak-btn:hover {
+      background: #228b22;
+    }
+    .back-btn {
+      display: block;
+      margin: 20px auto;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 15px;
+      background: #6a5acd;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .back-btn:hover {
+      background: #483d8b;
+      transform: scale(1.05);
+    }
+    .planet-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      margin: 20px 0;
+    }
+    .planet-card {
+      background: #e6f7ff;
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>🌟 Aprende Jugando 🌟</header>
+  <div class="container">
+    <!-- Menú de asignaturas -->
+    <div class="menu" id="menu">
+      <h2>Elige una asignatura:</h2>
+      <button onclick="showSection('naturales')">🌱 Naturales</button>
+      <button onclick="showSection('castellano')">📚 Castellano</button>
+      <button onclick="showSection('sociales')">🌍 Sociales</button>
+      <button onclick="showSection('geometria')">📐 Geometría</button>
+      <button onclick="showSection('informatica')">💻 Informática</button>
+      <button onclick="showSection('cristiana')">✝️ Educación Cristiana</button>
+      <button onclick="showSection('ingles')">🌤️ Inglés</button>
+      <button onclick="window.location.href='codigo/basketballGame.html'">➗ Matemáticas</button>
+    </div>
+
+    <!-- CIENCIAS NATURALES -->
+    <div id="naturales" class="section">
+      <h2>🌱 Ciencias Naturales</h2>
+      
+      <div class="subtopic">
+        <h3>Sistema Respiratorio</h3>
+        <p>El sistema respiratorio nos permite respirar. Cuando inhalamos, tomamos oxígeno del aire, y cuando exhalamos, liberamos dióxido de carbono. Los pulmones son los órganos principales de este sistema.</p>
+        <button class="speak-btn" onclick="speak(this.previousElementSibling.textContent)">🔊 Escuchar</button>
+      </div>
+      
+      <div class="subtopic">
+        <h3>Sistema Circulatorio</h3>
+        <p>El sistema circulatorio transporta sangre por todo nuestro cuerpo. El corazón bombea la sangre que lleva oxígeno y nutrientes a todas las células.</p>
+        <button class="speak-btn" onclick="speak(this.previousElementSibling.textContent)">🔊 Escuchar</button>
+      </div>
+      
+      <div class="subtopic">
+        <h3>Sistema Óseo</h3>
+        <p>Nuestro esqueleto está formado por huesos que nos dan estructura, protegen órganos importantes y nos permiten movernos. El cuerpo humano tiene 206 huesos.</p>
+        <button class="speak-btn" onclick="speak(this.previousElementSibling.textContent)">🔊 Escuchar</button>
+      </div>
+      
+      <div class="subtopic">
+        <h3>Sistema Muscular</h3>
+        <p>Los músculos nos permiten mover nuestro cuerpo. Hay músculos voluntarios (que controlamos) e involuntarios (que trabajan automáticamente, como el corazón).</p>
+        <button class="speak-btn" onclick="speak(this.previousElementSibling.textContent)">🔊 Escuchar</button>
+      </div>
+      
+      <div class="subtopic">
+        <h3>Cuidados y Enfermedades</h3>
+        <p>Para mantener nuestros sistemas sanos debemos: hacer ejercicio, comer saludable y descansar. Algunas enfermedades comunes son: resfriados (sistema respiratorio), anemia (sistema circulatorio) y fracturas (sistema óseo).</p>
+        <button class="speak-btn" onclick="speak(this.previousElementSibling.textContent)">🔊 Escuchar</button>
+      </div>
+
+      <h3>📖 Quiz de Ciencias Naturales</h3>
+      <div class="question">
+        <p>¿Qué sistema nos permite respirar?</p>
+        <button onclick="checkAnswer(this,true)">Sistema respiratorio</button>
+        <button onclick="checkAnswer(this,false)">Sistema digestivo</button>
+        <button onclick="checkAnswer(this,false)">Sistema óseo</button>
+      </div>
+      <div class="question">
+        <p>¿Qué órgano bombea la sangre en el sistema circulatorio?</p>
+        <button onclick="checkAnswer(this,true)">Corazón</button>
+        <button onclick="checkAnswer(this,false)">Pulmones</button>
+        <button onclick="checkAnswer(this,false)">Hígado</button>
+      </div>
+      <div class="question">
+        <p>¿Cuántos huesos tiene aproximadamente el cuerpo humano?</p>
+        <button onclick="checkAnswer(this,true)">206</button>
+        <button onclick="checkAnswer(this,false)">150</button>
+        <button onclick="checkAnswer(this,false)">300</button>
+      </div>
+      <div class="question">
+        <p>¿Qué sistema nos permite movernos?</p>
+        <button onclick="checkAnswer(this,true)">Sistema muscular</button>
+        <button onclick="checkAnswer(this,false)">Sistema nervioso</button>
+        <button onclick="checkAnswer(this,false)">Sistema digestivo</button>
+      </div>
+      <div class="question">
+        <p>¿Qué debemos hacer para mantener nuestros sistemas sanos?</p>
+        <button onclick="checkAnswer(this,true)">Ejercicio y alimentación saludable</button>
+        <button onclick="checkAnswer(this,false)">Ver televisión todo el día</button>
+        <button onclick="checkAnswer(this,false)">Comer solo dulces</button>
+      </div>
+      <button class="back-btn" onclick="goBack()">⬅️ Volver al menú</button>
+    </div>
+
+    <!-- CASTELLANO -->
+    <div id="castellano" class="section">
+      <h2>📚 Castellano</h2>
+      
+      <div class="subtopic">
+        <h3>El Cuento</h3>
+        <p>Un cuento es una narración breve con pocos personajes y un argumento sencillo. Tiene inicio, nudo y desenlace. Ejemplo: "Caperucita Roja", "Los tres cerditos".</p>
+        <button class="speak-btn" onclick="speak(this.previousElementSibling.textContent)">🔊 Escuchar</button>
+      </div>
+      
+      <div class="subtopic">
+        <h3>La Fábula</h3>
+        <p>Una fábula es un cuento corto con una enseñanza moral. Sus personajes suelen ser animales que hablan y actúan como personas. Al final tiene una moraleja. Ejemplo: "La liebre y la tortuga".</p>
+        <button class="speak-btn" onclick="speak(this.previousElementSibling.textContent)">🔊 Escuchar</button>
+      </div>
+      
+      <div class="subtopic">
+        <h3>Los Mitos</h3>
+        <p>Los mitos son relatos tradicionales que explican el origen del mundo, de los seres humanos o de fenómenos naturales. Suelen incluir dioses, héroes y seres sobrenaturales. Ejemplo: "El mito de la creación".</p>
+        <button class="speak-btn" onclick="speak(this.previousElementSibling.textContent)">🔊 Escuchar</button>
+      </div>
+      
+      <div class="subtopic">
+        <h3>La Leyenda</h3>
+        <p>Una leyenda es una narración tradicional que cuenta hechos reales o imaginarios relacionados con un lugar o personaje específico. A menudo se basan en algo real pero exagerado con elementos fantásticos. Ejemplo: "La Llorona".</p>
+        <button class="speak-btn" onclick="speak(this.previousElementSibling.textContent)">🔊 Escuchar</button>
+      </div>
+
+      <h3>📖 Quiz de Castellano</h3>
+      <div class="question">
+        <p>¿Qué es un cuento?</p>
+        <button onclick="checkAnswer(this,true)">Una narración breve con inicio, nudo y desenlace</button>
+        <button onclick="checkAnswer(this,false)">Un poema muy largo</button>
+        <button onclick="checkAnswer(this,false)">Una canción</button>
+      </div>
+      <div class="question">
+        <p>¿Qué tipo de personajes suelen aparecer en las fábulas?</p>
+        <button onclick="checkAnswer(this,true)">Animales que hablan</button>
+        <button onclick="checkAnswer(this,false)">Extraterrestres</button>
+        <button onclick="checkAnswer(this,false)">Robots</button>
+      </div>
+      <div class="question">
+        <p>¿Qué es un mito?</p>
+        <button onclick="checkAnswer(this,true)">Un relato que explica el origen del mundo</button>
+        <button onclick="checkAnswer(this,false)">Una noticia del periódico</button>
+        <button onclick="checkAnswer(this,false)">Una receta de cocina</button>
+      </div>
+      <div class="question">
+        <p>¿En qué se diferencia una leyenda de un mito?</p>
+        <button onclick="checkAnswer(this,true)">La leyenda se basa en algo real con elementos fantásticos</button>
+        <button onclick="checkAnswer(this,false)">La leyenda siempre es completamente cierta</button>
+        <button onclick="checkAnswer(this,false)">La leyenda solo habla del futuro</button>
+      </div>
+      <div class="question">
+        <p>¿Qué enseñanza tiene la fábula "La liebre y la tortuga"?</p>
+        <button onclick="checkAnswer(this,true)">La constancia vence a la rapidez</button>
+        <button onclick="checkAnswer(this,false)">Es mejor ser el más rápido</button>
+        <button onclick="checkAnswer(this,false)">No hay que ayudar a los demás</button>
+      </div>
+      <button class="back-btn" onclick="goBack()">⬅️ Volver al menú</button>
+    </div>
+
+    <!-- SOCIALES -->
+    <div id="sociales" class="section">
+      <h2>🌍 Sociales</h2>
+      
+      <div class="subtopic">
+        <h3>El Agua</h3>
+        <p>El agua es esencial para la vida en la Tierra. Cubre aproximadamente el 70% de la superficie del planeta. Existe en tres estados: sólido (hielo), líquido (agua) y gaseoso (vapor). Debemos cuidarla porque es un recurso limitado.</p>
+        <button class="speak-btn" onclick="speak(this.previousElementSibling.textContent)">🔊 Escuchar</button>
+      </div>
+      
+      <div class="subtopic">
+        <h3>La Tierra</h3>
+        <p>La Tierra es nuestro planeta y el tercero más cercano al Sol. Es el único planeta conocido que tiene vida. Tiene una atmósfera que nos protege y agua en estado líquido.</p>
+        <button class="speak-btn" onclick="speak(this.previousElementSibling.textContent)">🔊 Escuchar</button>
+      </div>
+      
+      <div class="subtopic">
+        <h3>El Sistema Solar</h3>
+        <p>El Sistema Solar está formado por el Sol y todos los cuerpos celestes que giran alrededor de él: planetas, lunas, asteroides y cometas.</p>
+        <button class="speak-btn" onclick="speak(this.previousElementSibling.textContent)">🔊 Escuchar</button>
+      </div>
+      
+      <div class="subtopic">
+        <h3>Los Planetas</h3>
+        <p>Nuestro Sistema Solar tiene 8 planetas. En orden desde el más cercano al Sol: Mercurio, Venus, Tierra, Marte, Júpiter, Saturno, Urano y Neptuno.</p>
+        <div class="planet-grid">
+          <div class="planet-card">Mercurio</div>
+          <div class="planet-card">Venus</div>
+          <div class="planet-card">Tierra</div>
+          <div class="planet-card">Marte</div>
+          <div class="planet-card">Júpiter</div>
+          <div class="planet-card">Saturno</div>
+          <div class="planet-card">Urano</div>
+          <div class="planet-card">Neptuno</div>
+        </div>
+        <button class="speak-btn" onclick="speak('Los planetas son: Mercurio, Venus, Tierra, Marte, Júpiter, Saturno, Urano y Neptuno')">🔊 Escuchar planetas</button>
+      </div>
+
+      <h3>📖 Quiz de Sociales</h3>
+      <div class="question">
+        <p>¿Qué porcentaje de la Tierra está cubierto por agua?</p>
+        <button onclick="checkAnswer(this,true)">Aproximadamente 70%</button>
+        <button onclick="checkAnswer(this,false)">Aproximadamente 30%</button>
+        <button onclick="checkAnswer(this,false)">Aproximadamente 50%</button>
+      </div>
+      <div class="question">
+        <p>¿Cuál es el tercer planeta del Sistema Solar?</p>
+        <button onclick="checkAnswer(this,true)">Tierra</button>
+        <button onclick="checkAnswer(this,false)">Marte</button>
+        <button onclick="checkAnswer(this,false)">Venus</button>
+      </div>
+      <div class="question">
+        <p>¿Cuántos planetas tiene nuestro Sistema Solar?</p>
+        <button onclick="checkAnswer(this,true)">8</button>
+        <button onclick="checkAnswer(this,false)">9</button>
+        <button onclick="checkAnswer(this,false)">7</button>
+      </div>
+      <div class="question">
+        <p>¿Por qué es importante el agua?</p>
+        <button onclick="checkAnswer(this,true)">Porque es esencial para la vida</button>
+        <button onclick="checkAnswer(this,false)">Porque es bonita</button>
+        <button onclick="checkAnswer(this,false)">Porque hace ruido</button>
+      </div>
+      <div class="question">
+        <p>¿Qué nos protege de los rayos del Sol?</p>
+        <button onclick="checkAnswer(this,true)">La atmósfera</button>
+        <button onclick="checkAnswer(this,false)">Las nubes</button>
+        <button onclick="checkAnswer(this,false)">Los árboles</button>
+      </div>
+      <button class="back-btn" onclick="goBack()">⬅️ Volver al menú</button>
+    </div>
+
+    <!-- GEOMETRÍA -->
+    <div id="geometria" class="section">
+      <h2>📐 Geometría</h2>
+      
+      <div class="subtopic">
+        <h3>El Reloj</h3>
+        <p>El reloj nos ayuda a medir el tiempo. Tiene dos manecillas: la corta indica las horas y la larga indica los minutos. Un día tiene 24 horas y cada hora tiene 60 minutos.</p>
+        <button class="speak-btn" onclick="speak(this.previousElementSibling.textContent)">🔊 Escuchar</button>
+      </div>
+      
+      <div class="subtopic">
+        <h3>El Calendario</h3>
+        <p>Un año tiene 12 meses: enero, febrero, marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre y diciembre. Un año normal tiene 365 días y uno bisiesto (cada 4 años) tiene 366 días.</p>
+        <button class="speak-btn" onclick="speak(this.previousElementSibling.textContent)">🔊 Escuchar</button>
+      </div>
+      
+      <div class="subtopic">
+        <h3>Figuras Geométricas Básicas</h3>
+        <p>Las figuras geométricas tienen formas específicas. El círculo es redondo, el cuadrado tiene 4 lados iguales, el triángulo tiene 3 lados y el rectángulo tiene 4 lados con los lados opuestos iguales.</p>
+        <button class="speak-btn" onclick="speak(this.previousElementSibling.textContent)">🔊 Escuchar</button>
+      </div>
+      
+      <div class="subtopic">
+        <h3>Medidas de Tiempo</h3>
+        <p>El tiempo se mide en segundos, minutos, horas, días, semanas, meses y años. 1 minuto = 60 segundos, 1 hora = 60 minutos, 1 día = 24 horas, 1 semana = 7 días, 1 mes = aproximadamente 30 días, 1 año = 12 meses.</p>
+        <button class="speak-btn" onclick="speak(this.previousElementSibling.textContent)">🔊 Escuchar</button>
+      </div>
+
+      <h3>📖 Quiz de Geometría</h3>
+      <div class="question">
+        <p>¿Qué indica la manecilla corta del reloj?</p>
+        <button onclick="checkAnswer(this,true)">Las horas</button>
+        <button onclick="checkAnswer(this,false)">Los minutos</button>
+        <button onclick="checkAnswer(this,false)">Los segundos</button>
+      </div>
+      <div class="question">
+        <p>¿Cuántos meses tiene un año?</p>
+        <button onclick="checkAnswer(this,true)">12</button>
+        <button onclick="checkAnswer(this,false)">10</button>
+        <button onclick="checkAnswer(this,false)">8</button>
+      </div>
+      <div class="question">
+        <p>¿Cuántos días tiene un año bisiesto?</p>
+        <button onclick="checkAnswer(this,true)">366</button>
+        <button onclick="checkAnswer(this,false)">365</button>
+        <button onclick="checkAnswer(this,false)">360</button>
+      </div>
+      <div class="question">
+        <p>¿Cuántos lados tiene un triángulo?</p>
+        <button onclick="checkAnswer(this,true)">3</button>
+        <button onclick="checkAnswer(this,false)">4</button>
+        <button onclick="checkAnswer(this,false)">5</button>
+      </div>
+      <div class="question">
+        <p>¿Cuántas horas tiene un día?</p>
+        <button onclick="checkAnswer(this,true)">24</button>
+        <button onclick="checkAnswer(this,false)">12</button>
+        <button onclick="checkAnswer(this,false)">30</button>
+      </div>
+      <button class="back-btn" onclick="goBack()">⬅️ Volver al menú</button>
+    </div>
+
+    <!-- INFORMÁTICA -->
+    <div id="informatica" class="section">
+      <h2>💻 Informática</h2>
+      
+      <div class="subtopic">
+        <h3>Partes de un Computador</h3>
+        <p>Un computador tiene varias partes importantes: la pantalla (muestra imágenes), el teclado (para escribir), el mouse (para seleccionar), la CPU (cerebro del computador) y los altavoces (para escuchar sonidos).</p>
+        <button class="speak-btn" onclick="speak(this.previousElementSibling.textContent)">🔊 Escuchar</button>
+      </div>
+      
+      <div class="subtopic">
+        <h3>Partes de un Teléfono</h3>
+        <p>Un teléfono inteligente tiene: pantalla táctil, micrófono (para hablar), altavoz (para escuchar), cámara (para tomar fotos y videos) y botones de volumen y encendido.</p>
+        <button class="speak-btn" onclick="speak(this.previousElementSibling.textContent)">🔊 Escuchar</button>
+      </div>
+      
+      <div class="subtopic">
+        <h3>Internet</h3>
+        <p>Internet es una red mundial que conecta computadoras y teléfonos. Nos permite buscar información, comunicarnos con otras personas y ver videos. Debemos usarlo con cuidado y con la supervisión de un adulto.</p>
+        <button class="speak-btn" onclick="speak(this.previousElementSibling.textContent)">🔊 Escuchar</button>
+      </div>
+      
+      <div class="subtopic">
+        <h3>Navegación Segura</h3>
+        <p>Para navegar seguro en internet: no compartas información personal, no hables con desconocidos, pide ayuda a un adulto si ves algo raro y usa contraseñas seguras.</p>
+        <button class="speak-btn" onclick="speak(this.previousElementSibling.textContent)">🔊 Escuchar</button>
+      </div>
+
+      <h3>📖 Quiz de Informática</h3>
+      <div class="question">
+        <p>¿Qué parte del computador muestra las imágenes?</p>
+        <button onclick="checkAnswer(this,true)">La pantalla</button>
+        <button onclick="checkAnswer(this,false)">El teclado</button>
+        <button onclick="checkAnswer(this,false)">El mouse</button>
+      </div>
+      <div class="question">
+        <p>¿Para qué sirve el micrófono en un teléfono?</p>
+        <button onclick="checkAnswer(this,true)">Para hablar</button>
+        <button onclick="checkAnswer(this,false)">Para ver videos</button>
+        <button onclick="checkAnswer(this,false)">Para escribir</button>
+      </div>
+      <div class="question">
+        <p>¿Qué es internet?</p>
+        <button onclick="checkAnswer(this,true)">Una red mundial que conecta dispositivos</button>
+        <button onclick="checkAnswer(this,false)">Un videojuego</button>
+        <button onclick="checkAnswer(this,false)">Un tipo de computadora</button>
+      </div>
+      <div class="question">
+        <p>¿Qué debemos hacer para navegar seguro en internet?</p>
+        <button onclick="checkAnswer(this,true)">No compartir información personal</button>
+        <button onclick="checkAnswer(this,false)">Dar nuestros datos a todos</button>
+        <button onclick="checkAnswer(this,false)">No pedir ayuda a los adultos</button>
+      </div>
+      <div class="question">
+        <p>¿Qué parte del computador se usa para escribir?</p>
+        <button onclick="checkAnswer(this,true)">El teclado</button>
+        <button onclick="checkAnswer(this,false)">La pantalla</button>
+        <button onclick="checkAnswer(this,false)">El mouse</button>
+      </div>
+      <button class="back-btn" onclick="goBack()">⬅️ Volver al menú</button>
+    </div>
+
+    <!-- EDUCACIÓN CRISTIANA -->
+    <div id="cristiana" class="section">
+      <h2>✝️ Educación Cristiana</h2>
+      
+      <div class="subtopic">
+        <h3>La Biblia</h3>
+        <p>La Biblia es el libro sagrado de los cristianos. Contiene la palabra de Dios y está dividida en dos partes: el Antiguo Testamento (antes de Jesús) y el Nuevo Testamento (vida y enseñanzas de Jesús).</p>
+        <button class="speak-btn" onclick="speak(this.previousElementSibling.textContent)">🔊 Escuchar</button>
+      </div>
+      
+      <div class="subtopic">
+        <h3>El Pentateuco</h3>
+        <p>El Pentateuco son los primeros cinco libros de la Biblia: Génesis (creación del mundo), Éxodo (salida de Egipto), Levítico (leyes religiosas), Números (censo del pueblo) y Deuteronomio (segunda ley).</p>
+        <button class="speak-btn" onclick="speak(this.previousElementSibling.textContent)">🔊 Escuchar</button>
+      </div>
+      
+      <div class="subtopic">
+        <h3>Personajes Bíblicos</h3>
+        <p>Algunos personajes importantes de la Biblia: Adán y Eva (primeros humanos), Noé (construyó el arca), Abraham (padre de muchas naciones), Moisés (liberó al pueblo de Israel), David (venció a Goliat) y Jesús (Hijo de Dios).</p>
+        <button class="speak-btn" onclick="speak(this.previousElementSibling.textContent)">🔊 Escuchar</button>
+      </div>
+      
+      <div class="subtopic">
+        <h3>Enseñanzas de Jesús</h3>
+        <p>Jesús enseñó a amar a Dios y al prójimo, a perdonar, a ser humildes y a ayudar a los necesitados. Sus parábolas (historias con enseñanza) como "El buen samaritano" nos muestran cómo vivir correctamente.</p>
+        <button class="speak-btn" onclick="speak(this.previousElementSibling.textContent)">🔊 Escuchar</button>
+      </div>
+
+      <h3>📖 Quiz de Educación Cristiana</h3>
+      <div class="question">
+        <p>¿En cuántas partes se divide la Biblia?</p>
+        <button onclick="checkAnswer(this,true)">2 partes: Antiguo y Nuevo Testamento</button>
+        <button onclick="checkAnswer(this,false)">3 partes</button>
+        <button onclick="checkAnswer(this,false)">4 partes</button>
+      </div>
+      <div class="question">
+        <p>¿Cuántos libros forman el Pentateuco?</p>
+        <button onclick="checkAnswer(this,true)">5</button>
+        <button onclick="checkAnswer(this,false)">7</button>
+        <button onclick="checkAnswer(this,false)">10</button>
+      </div>
+      <div class="question">
+        <p>¿Quién liberó al pueblo de Israel de Egipto?</p>
+        <button onclick="checkAnswer(this,true)">Moisés</button>
+        <button onclick="checkAnswer(this,false)">Abraham</button>
+        <button onclick="checkAnswer(this,false)">David</button>
+      </div>
+      <div class="question">
+        <p>¿Qué enseñó Jesús sobre cómo tratar a los demás?</p>
+        <button onclick="checkAnswer(this,true)">Amar al prójimo</button>
+        <button onclick="checkAnswer(this,false)">Ignorar a los necesitados</button>
+        <button onclick="checkAnswer(this,false)">Solo ayudar a los amigos</button>
+      </div>
+      <div class="question">
+        <p>¿Qué libro del Pentateuco habla de la creación del mundo?</p>
+        <button onclick="checkAnswer(this,true)">Génesis</button>
+        <button onclick="checkAnswer(this,false)">Éxodo</button>
+        <button onclick="checkAnswer(this,false)">Levítico</button>
+      </div>
+      <button class="back-btn" onclick="goBack()">⬅️ Volver al menú</button>
+    </div>
+
+    <!-- INGLÉS -->
+    <div id="ingles" class="section">
+      <h2>🌤️ Inglés</h2>
+      
+      <div class="subtopic">
+        <h3>Saludos y Despedidas</h3>
+        <p>En inglés, para saludar decimos "Hello" o "Hi". Para despedirnos decimos "Goodbye" o "Bye". Para preguntar cómo está alguien decimos "How are you?" y podemos responder "I'm fine, thank you".</p>
+        <button class="speak-btn" onclick="speak(this.previousElementSibling.textContent)">🔊 Escuchar</button>
+      </div>
+      
+      <div class="subtopic">
+        <h3>Números del 1 al 10</h3>
+        <p>Los números en inglés del 1 al 10 son: one (1), two (2), three (3), four (4), five (5), six (6), seven (7), eight (8), nine (9), ten (10).</p>
+        <button class="speak-btn" onclick="speak(this.previousElementSibling.textContent)">🔊 Escuchar</button>
+      </div>
+      
+      <div class="subtopic">
+        <h3>Colores Básicos</h3>
+        <p>Algunos colores en inglés: red (rojo), blue (azul), green (verde), yellow (amarillo), orange (naranja), purple (morado), black (negro), white (blanco).</p>
+        <button class="speak-btn" onclick="speak(this.previousElementSibling.textContent)">🔊 Escuchar</button>
+      </div>
+      
+      <div class="subtopic">
+        <h3>Animales</h3>
+        <p>Nombres de algunos animales en inglés: dog (perro), cat (gato), bird (pájaro), fish (pez), rabbit (conejo), horse (caballo), cow (vaca), lion (león).</p>
+        <button class="speak-btn" onclick="speak(this.previousElementSibling.textContent)">🔊 Escuchar</button>
+      </div>
+
+      <h3>📖 Quiz de Inglés</h3>
+      <div class="question">
+        <p>¿Cómo se dice "hola" en inglés?</p>
+        <button onclick="checkAnswer(this,true)">Hello</button>
+        <button onclick="checkAnswer(this,false)">Goodbye</button>
+        <button onclick="checkAnswer(this,false)">Thank you</button>
+      </div>
+      <div class="question">
+        <p>¿Cómo se dice "5" en inglés?</p>
+        <button onclick="checkAnswer(this,true)">Five</button>
+        <button onclick="checkAnswer(this,false)">Four</button>
+        <button onclick="checkAnswer(this,false)">Six</button>
+      </div>
+      <div class="question">
+        <p>¿Qué color es "blue" en español?</p>
+        <button onclick="checkAnswer(this,true)">Azul</button>
+        <button onclick="checkAnswer(this,false)">Rojo</button>
+        <button onclick="checkAnswer(this,false)">Verde</button>
+      </div>
+      <div class="question">
+        <p>¿Cómo se dice "gato" en inglés?</p>
+        <button onclick="checkAnswer(this,true)">Cat</button>
+        <button onclick="checkAnswer(this,false)">Dog</button>
+        <button onclick="checkAnswer(this,false)">Bird</button>
+      </div>
+      <div class="question">
+        <p>¿Cómo se pregunta "¿cómo estás?" en inglés?</p>
+        <button onclick="checkAnswer(this,true)">How are you?</button>
+        <button onclick="checkAnswer(this,false)">What is your name?</button>
+        <button onclick="checkAnswer(this,false)">Where are you from?</button>
+      </div>
+      <button class="back-btn" onclick="goBack()">⬅️ Volver al menú</button>
+    </div>
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.getElementById("menu").style.display = "none";
+      let sections = document.querySelectorAll(".section");
+      sections.forEach(s => s.style.display = "none");
+      document.getElementById(id).style.display = "block";
+    }
+
+    function goBack() {
+      let sections = document.querySelectorAll(".section");
+      sections.forEach(s => s.style.display = "none");
+      document.getElementById("menu").style.display = "block";
+    }
+
+    function checkAnswer(button, correct) {
+      if (correct) {
+        alert("✅ ¡Correcto!");
+      } else {
+        alert("❌ Intenta de nuevo");
+      }
+    }
+
+    function speak(text) {
+      let speech = new SpeechSynthesisUtterance(text);
+      speech.lang = "es-ES";
+      window.speechSynthesis.cancel(); 
+      window.speechSynthesis.speak(speech);
+    }
+  </script>
+</body>
+</html>

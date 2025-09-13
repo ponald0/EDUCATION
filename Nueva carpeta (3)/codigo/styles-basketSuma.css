@@ -1,0 +1,488 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1b4d3e; /* color de fondo o reemplaza por tu imagen */
+  overflow: hidden; /* evita scroll */
+}
+
+.fueraJuego {
+    text-align: center;
+}
+
+.fueraJuego h1{
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: -7%;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    font-size: 80px;
+}
+
+.fueraJuego button {
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: rgb(9, 255, 0);
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 30px;
+    border: 2px solid white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.balones {
+    width: 60px;
+    height: auto;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
+}
+
+.balon {
+    width: 40px;
+    height: 40px;
+    margin: 4px;
+}
+
+.simboloOperacion {
+    font-size: 32px;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+#opciones button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(255, 102, 0);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
+}
+
+
+#opciones{
+    margin-top: 15px; 
+    display: flex; 
+    justify-content: center; 
+
+}
+
+#balones, #pregunta{
+    display: flex; 
+    justify-content: center; 
+    gap: 5px; 
+    flex-wrap: wrap;
+}
+
+#pregunta{
+    font-size: 40px;
+}
+
+.Dentrojuego{
+    display: none;
+    background-color: rgb(255, 102, 0);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 5px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+.Dentrojuego h1, #pregunta{
+    color: white;
+}
+
+
+.marcador {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 15px;
+    z-index: 1000;
+}
+
+.alerta{
+    display: none;
+}
+
+
+.balon{
+    width: 50px;
+    position: absolute;
+    top: 5%;
+    right: 65%;
+    z-index: -1;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
+}
+
+/*animacionae*/
+@keyframes entradaTitulo {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.balon img {
+  animation: rebotar 2s infinite ease-in-out;
+}
+
+@keyframes rebotar {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+#botones {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los botones */
+    margin-top: 20px;
+}
+
+
+.reiniciar {
+    background-color: rgb(0, 199, 0);
+    color: white;
+    
+    
+}
+
+.salir {
+    background-color: red;
+    color: white;
+}
+
+.reiniciar, .salir{
+    margin-top: 5%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(211, 211, 211);
+}
+
+.reiniciar:hover{
+    background-color: green;
+}
+
+.salir:hover{
+    background-color: rgb(196, 0, 0);
+}
+
+
+#botonesFinales button {
+    padding: 8px 16px;
+    margin: 5px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#btnReiniciar {
+    background-color: green;
+    color: white;
+}
+
+#btnSalirFinal {
+    background-color: red;
+    color: white;
+}
+
+
+/* Animación de entrada de la pregunta */
+.entradaPregunta {
+  animation: entradaPregunta 0.5s ease-out forwards;
+}
+
+@keyframes entradaPregunta {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animación de salida de la pregunta */
+.salidaPregunta {
+  animation: salidaPregunta 0.4s ease-in forwards;
+}
+
+@keyframes salidaPregunta {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+}
+
+.videoRespuestaContenedor {
+    display: none;
+}
+
+
+#videoRespuesta {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#alertaBasket {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px 40px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  animation: aparecerAlerta 0.5s ease-out forwards;
+}
+
+.animarAlerta {
+  animation: aparecerAlerta 0.5s ease-out forwards;
+}
+
+@keyframes aparecerAlerta {
+  0% {
+    transform: scale(0.8) translate(-50%, -50%);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+.animacion-mas-dos {
+  position: absolute;
+  color: yellow;
+  font-size: 28px;
+  font-weight: bold;
+  pointer-events: none;
+  z-index: 10001;
+  animation: flotarYDesaparecer 2s ease-out forwards;
+}
+
+@keyframes flotarYDesaparecer {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+}
+
+#alerta {
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 12px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 10000;
+  box-shadow: 0 0 10px yellow;
+  display: none;
+  user-select: none;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.animarAlerta {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.fadeOutAlerta {
+  animation: fadeOut 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+#contenedorVideoAnimacion {
+    transition: all 0.3s ease;
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 768px) {
+    #contenedorVideoAnimacion {
+        width: 90vw !important;
+        height: auto !important;
+    }
+}
+
+/* Asegurar que el video esté sobre otros elementos */
+#contenedorVideoAnimacion {
+    z-index: 9999;
+}
+/* Cancha full screen */
+.cancha {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
+  background: linear-gradient(180deg, #1b4d3e 0%, #2c6f50 100%);
+  border-radius: 0; /* elimina bordes redondeados para que ocupe todo */
+  box-shadow: none; /* quita sombras para no afectar tamaño */
+  position: absolute;
+  z-index: -999999;
+  /* Si quieres que mantenga proporción, usa:
+  aspect-ratio: 14 / 10;
+  object-fit: cover; // pero eso puede dejar barras negras */
+}
+
+/* Ajustes para líneas, círculos y áreas que dependen de cancha */
+.linea1 {
+    position: absolute;
+    top: 0.5%;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: #f0f0f0;
+    opacity: 0.7;
+    transform: translateY(-50%);
+    border-radius: 3px;
+}
+.linea2 {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: #f0f0f0;
+    opacity: 0.7;
+    transform: translateY(-50%);
+    border-radius: 3px;
+}
+
+.linea3 {
+  position: absolute;
+  top: 50%;                        /* Centra verticalmente */
+  left: 50%;                       /* Centra horizontalmente */
+  width: 6px;                      /* Línea delgada vertical */
+  height: 610px;                   /* Largo de la línea (ajustable) */
+  background: #f0f0f0;
+  opacity: 0.7;
+  transform: translate(-50%, -50%); /* Centrado fino en ambas direcciones */
+  border-radius: 3px;
+}
+
+
+.circulo-central {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 140px;
+    height: 140px;
+    border: 6px solid #f0f0f0;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.7;
+}
+
+.area-libre.izquierda, .area-libre.derecha {
+    position: absolute;
+    top: 50%;
+    width: 180px;
+    height: 280px;
+    border: 6px solid #f0f0f0;
+    border-radius: 0 50% 50% 0 / 0 100% 100% 0;
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 0.6;
+    transform: translateY(-50%);
+}
+
+.area-libre.izquierda {
+    right: -.2%;
+    border-radius: 50% 0 0 50% / 100% 0 0 100%;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+}
+
+.area-libre.derecha {
+    left: -0.3%;
+    border-radius: 0 50% 50% 0 / 0 100% 100% 0;
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+}
+
+.canasta.izquierda, .canasta.derecha {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    background: #c0392b;
+    border-radius: 100px;
+    transform: translateY(-50%);
+    box-shadow: 0 0 20px #e74c3c;
+    border: 2px solid black;
+}
+
+.canasta.izquierda {
+    left: 5x;
+}
+
+.canasta.derecha {
+    right: 5px;
+}
+
+.balon-cancha {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #f39c12, #d35400);
+    box-shadow: 0 0 10px #e67e22;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rebotar 2s infinite ease-in-out;
+}
